@@ -1,19 +1,21 @@
 const getTodoElement = todo => {
-  const { text, completed } = todo
+  const {
+    text,
+    completed
+  } = todo
+
   return `
-  <li> ${completed ? 'class="completed"' : ''}
+  <li ${completed ? 'class="completed"' : ''}>
     <div class="view">
-      <input
+      <input 
         ${completed ? 'checked' : ''}
-        class="toggle"
-        type="checkbox"
-      />
+        class="toggle" 
+        type="checkbox">
       <label>${text}</label>
       <button class="destroy"></button>
     </div>
-    <input class="edit" value="${text}" />
-  </li>
-  `
+    <input class="edit" value="${text}">
+  </li>`
 }
 
 const getTodoCount = todos => {
