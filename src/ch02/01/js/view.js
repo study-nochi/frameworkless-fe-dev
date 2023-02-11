@@ -19,10 +19,10 @@ const getTodoElement = todo => {
 }
 
 const getTodoCount = todos => {
-  const notCompleted = todos.filter(todo => !todo.completed);
-  const { length } = notCompleted;
+  const notCompleted = todos.filter(todo => !todo.completed)
+  const { length } = notCompleted
   if (length === 1) {
-    return '1 Item left';
+    return '1 Item left'
   }
   return `${length} Items left`
 }
@@ -32,7 +32,7 @@ export default (targetElement, state) => {
     currentFilter, todos
   } = state
 
-  const element = targetElement.cloneNode(true);
+  const element = targetElement.cloneNode(true)
   const list = element.querySelector('.todo-list')
   const counter = element.querySelector('.todo-count')
   const filters = element.querySelector('.filters')
@@ -48,5 +48,5 @@ export default (targetElement, state) => {
     }
   })
 
-  return element;
+  return element
 }

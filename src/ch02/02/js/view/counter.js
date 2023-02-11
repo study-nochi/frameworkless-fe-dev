@@ -1,7 +1,8 @@
-const getTodoCount = todos => todos => {
-  const notCompleted = todos.filter(todo => !todo.completed)
+const getTodoCount = todos => {
+  const notCompleted = todos
+    .filter(todo => !todo.completed)
 
-  const { length } = notCompleted;
+  const { length } = notCompleted
   if (length === 1) {
     return '1 Item left'
   }

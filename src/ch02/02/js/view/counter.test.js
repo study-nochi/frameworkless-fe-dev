@@ -9,16 +9,20 @@ describe('counterView', () => {
 
   test('should put the number of not completed todo in a new DOM elements', () => {
     const newCounter = counterView(targetElement, {
-      todos: [{
-        text: 'First',
-        completed: true
-      }, {
-        text: 'Second',
-        completed: false
-      }, {
-        text: 'Third',
-        completed: false
-      }]
+      todos: [
+        {
+          text: 'First',
+          completed: true
+        },
+        {
+          text: 'Second',
+          completed: false
+        },
+        {
+          text: 'Third',
+          completed: false
+        }
+      ]
     })
     expect(newCounter.textContent).toBe('2 Items left')
   })
@@ -31,7 +35,7 @@ describe('counterView', () => {
           completed: true
         },
         {
-          text: 'Thrid',
+          text: 'Third',
           completed: false
         }
       ]
@@ -39,4 +43,3 @@ describe('counterView', () => {
     expect(newCounter.textContent).toBe('1 Item left')
   })
 })
-
