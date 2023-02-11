@@ -13,7 +13,7 @@
     "standard": "^17.0.0"
   },
   "scripts": {
-    "dev": "http-server",
+    "dev": "http-server -c-1",
     "deploy": "now && now alias",
     "test": "jest"
   },

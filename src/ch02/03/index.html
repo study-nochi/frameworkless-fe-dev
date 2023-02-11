@@ -6,25 +6,29 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Faker/3.1.0/faker.js"></script>
+
   <title>Rendering</title>
 </head>
 
 <body>
   <section class="todoapp">
     <header class="header">
-      <h1>todos 02</h1>
-      <input class="new-todo" placeholder="What needs to be done?" autofocus />
+      <h1>todos 03</h1>
+      <input class="new-todo" placeholder="What needs to be done?" autofocus>
     </header>
     <section class="main">
-      <input id="toggle-all" class="toggle-all" type="checkbox" />
-      <label for="toggle-all">Mark all as complete</label>
-      <ul class="todo-list"></ul>
+      <input id="toggle-all" class="toggle-all" type="checkbox">
+      <label for="toggle-all">
+        Mark all as complete
+      </label>
+      <ul class="todo-list" data-component="todos">
+      </ul>
     </section>
     <footer class="footer">
-      <span class="todo-count">
+      <span class="todo-count" data-component="counter">
         1 Item Left
       </span>
-      <ul class="filters">
+      <ul class="filters" data-component="filters">
         <li>
           <a href="#/">All</a>
         </li>
@@ -45,6 +49,7 @@
     <p>Thanks to <a href="http://todomvc.com">TodoMVC</a></p>
   </footer>
   <script type="module" src="./js/index.js"></script>
+
 </body>
 
 </html>
