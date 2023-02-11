@@ -1,0 +1,28 @@
+{
+  "name": "stydy-frameworkless",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/ainochi-kor/study-frameworkless.git",
+  "author": "Nochi <kthrkdals@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+    "http-server": "^14.1.1",
+    "jest": "^29.4.2",
+    "now": "^21.0.1",
+    "standard": "^17.0.0"
+  },
+  "scripts": {
+    "dev": "http-server",
+    "deploy": "now && now alias",
+    "test": "jest"
+  },
+  "standard": {
+    "globals": [
+      "expect",
+      "test",
+      "beforeEach",
+      "describe"
+    ]
+  }
+}

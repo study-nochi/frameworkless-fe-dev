@@ -1,26 +1,28 @@
 const getTodoElement = todo => {
-  const { text, completed } = todo
+  const {
+    text,
+    completed
+  } = todo
+
   return `
-  <li> ${completed ? 'class="completed"' : ''}
+  <li ${completed ? 'class="completed"' : ''}>
     <div class="view">
-      <input
+      <input 
         ${completed ? 'checked' : ''}
-        class="toggle"
-        type="checkbox"
-      />
+        class="toggle" 
+        type="checkbox">
       <label>${text}</label>
       <button class="destroy"></button>
     </div>
-    <input class="edit" value="${text}" />
-  </li>
-  `
+    <input class="edit" value="${text}">
+  </li>`
 }
 
 const getTodoCount = todos => {
-  const notCompleted = todos.filter(todo => !todo.completed);
-  const { length } = notCompleted;
+  const notCompleted = todos.filter(todo => !todo.completed)
+  const { length } = notCompleted
   if (length === 1) {
-    return '1 Item left';
+    return '1 Item left'
   }
   return `${length} Items left`
 }
@@ -30,7 +32,7 @@ export default (targetElement, state) => {
     currentFilter, todos
   } = state
 
-  const element = targetElement.cloneNode(true);
+  const element = targetElement.cloneNode(true)
   const list = element.querySelector('.todo-list')
   const counter = element.querySelector('.todo-count')
   const filters = element.querySelector('.filters')
@@ -46,5 +48,5 @@ export default (targetElement, state) => {
     }
   })
 
-  return element;
+  return element
 }
