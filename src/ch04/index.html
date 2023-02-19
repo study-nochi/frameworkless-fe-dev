@@ -11,7 +11,8 @@
 <body>
   <template id="footer">
     <footer class="footer">
-      <span class="todo-count"></span>
+      <span class="todo-count">
+      </span>
       <ul class="filters">
         <li>
           <a href="#/">All</a>
@@ -35,19 +36,19 @@
         <label></label>
         <button class="destroy"></button>
       </div>
-      <input class="edit" />
+      <input class="edit">
     </li>
   </template>
   <template id="todo-app">
-    <section class="todo-app">
+    <section class="todoapp">
       <header class="header">
         <h1>todos</h1>
-        <input class="new-todo" placeholder="What needs to be done?" autofocus />
+        <input class="new-todo" placeholder="What needs to be done?" autofocus>
       </header>
       <section class="main">
         <input id="toggle-all" class="toggle-all" type="checkbox">
         <label for="toggle-all">
-          Mark all as completed
+          Mark all as complete
         </label>
         <todomvc-list></todomvc-list>
       </section>
