@@ -9,7 +9,7 @@ const INITIAL_STATE = {
 // createStore 함수
 export default (initialState = INITIAL_STATE) => {
   // 초기 상태 객체를 깊은 복제하여 사용
-  const state = cloneDeep(initialState)
+  const state = observableFactory(initialState)
 
   // 액션 메서드들
   const addItem = text => {
